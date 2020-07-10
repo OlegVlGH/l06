@@ -2,7 +2,7 @@ package ru.ovk.home;
 
 import java.util.Arrays;
 import static ru.ovk.home.constant.TerminalConst.*;
-
+import static ru.ovk.home.constant.TerminalMessageConst.*;
 public class Main {
 
     public static void main(String[] args) {
@@ -17,11 +17,11 @@ public class Main {
         else  sCommand=args[0];
 
         switch (sCommand){
-         case ABOUT:   System.out.println("тестовое приложение"); break;
-         case VERSION: System.out.println("О приложении");break;
-         case HELP:    System.out.println("Помощь" + "\n vesrsion  версия приложения" + "\n about о приложении");break;
-         case DEFAULT: System.out.println("умолчание");break;
-         default:      System.out.println("Нет такой команды");
+         case ABOUT:   System.out.println(MABOUT); break;
+         case VERSION: System.out.println(MVERSION);break;
+         case HELP:    System.out.println(MHELP);break;
+         case DEFAULT: System.out.println(MDEFAULT);break;
+         default:      System.out.println(MERROR);
         }
      return;
 
