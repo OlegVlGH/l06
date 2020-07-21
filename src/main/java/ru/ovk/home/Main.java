@@ -2,7 +2,7 @@ package ru.ovk.home;
 
 import java.util.Arrays;
 import static ru.ovk.home.constant.TerminalConst.*;
-import static ru.ovk.home.constant.TerminalMessageConst.*;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -17,11 +17,11 @@ public class Main {
         else  sCommand=args[0];
 
         switch (sCommand){
-         case ABOUT:   System.out.println(MABOUT); break;
-         case VERSION: System.out.println(MVERSION);break;
-         case HELP:    System.out.println(MHELP);break;
-         case DEFAULT: System.out.println(MDEFAULT);break;
-         default:      System.out.println(MERROR);
+         case CMD_ABOUT:   System.out.println(TELL_ABOUT);    break;
+         case CMD_VERSION: System.out.println(TELL_VERSION);  break;
+         case CMD_HELP:    System.out.println(TELL_HELP);     break;
+         case CMD_DEFAULT: System.out.println(TELL_DEFAULT);  break;
+         default:      System.out.println(TELL_ERROR);
         }
      return;
 
