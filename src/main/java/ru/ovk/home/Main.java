@@ -9,25 +9,54 @@ public class Main {
         DisplayTerminalMess(args);
     }
 
-
     private static void DisplayTerminalMess(final String[] args){
-        String sCommand="";
+        String sCommand;
 
-        if(args.length<1 || args==null)  sCommand = "default";
+        if(args.length<1)  sCommand = "default";
         else  sCommand=args[0];
 
-        switch (sCommand){
-         case CMD_ABOUT:   System.out.println(TELL_ABOUT);    break;
-         case CMD_VERSION: System.out.println(TELL_VERSION);  break;
-         case CMD_HELP:    System.out.println(TELL_HELP);     break;
-         case CMD_DEFAULT: System.out.println(TELL_DEFAULT);  break;
-         default:      System.out.println(TELL_ERROR);
+        switch (sCommand) {
+            case CMD_ABOUT:
+                displayAbout();
+                break;
+            case CMD_VERSION:
+                displayVersion();
+                break;
+            case CMD_HELP:
+                displayHelp() ;
+                break;
+            case CMD_DEFAULT:
+                displayDefault();
+                break;
+            default:
+                displayErr();
         }
-     return;
 
     }
 
+    private  static void displayVersion() {
+        System.out.println(TELL_VERSION);
+        System.exit(0);
+    }
 
+    private  static void displayAbout() {
+        System.out.println(TELL_ABOUT);
+        System.exit(0);
+    }
 
+    private  static void displayHelp() {
+        System.out.println(TELL_HELP);
+        System.exit(0);
+    }
+
+    private  static void displayDefault() {
+        System.out.println("Welcome");
+        System.exit(0);
+    }
+
+    private  static void displayErr() {
+        System.out.println(TELL_ERROR);
+        System.exit(-1);
+    }
 
 }
