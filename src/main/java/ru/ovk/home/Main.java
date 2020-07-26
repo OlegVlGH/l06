@@ -1,62 +1,74 @@
 package ru.ovk.home;
 
 import java.util.Arrays;
+import java.util.Scanner;
+
 import static ru.ovk.home.constant.TerminalConst.*;
 
 public class Main {
-
     public static void main(String[] args) {
         DisplayTerminalMess(args);
+        final Scanner scaner = new Scanner(System.in);
+        String command = "";
+        while (!CMD_EXIT.equals(command)) {
+            command = scaner.nextLine();
+            DisplayTerminalMess(command);
+        }
     }
 
-    private static void DisplayTerminalMess(final String[] args){
+    private static void DisplayTerminalMess(final String[] args) {
         String sCommand;
+        if (args.length < 1) sCommand = "default";
+        else sCommand = args[0];
+        final int result = DisplayTerminalMess(sCommand);
+       // System.exit(result);
+    }
 
-        if(args.length<1)  sCommand = "default";
-        else  sCommand=args[0];
-
+    private static int DisplayTerminalMess(final String sCommand) {
         switch (sCommand) {
             case CMD_ABOUT:
-                displayAbout();
-                break;
+                return displayAbout();
             case CMD_VERSION:
-                displayVersion();
-                break;
+                return displayVersion();
             case CMD_HELP:
-                displayHelp() ;
-                break;
+                return displayHelp();
             case CMD_DEFAULT:
-                displayDefault();
-                break;
+                return displayDefault();
+            case CMD_EXIT:
+                return displayExit();
             default:
-                displayErr();
+                return displayErr();
         }
-
     }
 
-    private  static void displayVersion() {
+    private static int displayVersion() {
         System.out.println(TELL_VERSION);
-        System.exit(0);
+        return 0;
     }
 
-    private  static void displayAbout() {
+    private static int displayAbout() {
         System.out.println(TELL_ABOUT);
-        System.exit(0);
+        return 0;
     }
 
-    private  static void displayHelp() {
+    private static int displayHelp() {
         System.out.println(TELL_HELP);
-        System.exit(0);
+        return 0;
     }
 
-    private  static void displayDefault() {
+    private static int displayDefault() {
         System.out.println("Welcome");
-        System.exit(0);
+        return 0;
     }
 
-    private  static void displayErr() {
+    private static int displayErr() {
         System.out.println(TELL_ERROR);
-        System.exit(-1);
+        return -1;
+    }
+
+    private static int displayExit() {
+        System.out.println(TELL_EXIT);
+        return 0;
     }
 
 }
