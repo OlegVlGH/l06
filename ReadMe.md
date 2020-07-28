@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #### Программа                                                                                                                       "task-manager" ver 1.0.3
 ##### Требования к Software
 ###### Open JDK 11
