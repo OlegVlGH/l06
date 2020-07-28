@@ -1,4 +1,4 @@
-# l06
+# l03 (Github: https://github.com/OlegVlGH/l06)
 
 [[_TOC_]]
 
@@ -7,7 +7,7 @@
 * [Github: https://github.com/OlegVlGH/l06](https://github.com/OlegVlGH/l06)
 ### Usage
     cd <project directory>/target
-    java -jar l06-<version>.jar <argument>
+    java -jar l03-<version>.jar <argument>
 ### Command-line arguments
     help      Display a list of terminal commands
     version   Display the program version
