@@ -1,5 +1,3 @@
-####   https://github.com/OlegVlGH/l06
-
 ####   "l06" ver 1.0.0
 #####   Software
 ###### Open JDK 11
