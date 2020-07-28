@@ -1,24 +1,25 @@
-####   "l06" ver 1.0.0
-#####   Software
-###### Open JDK 11
-#####    
-###### Apache Maven 3.6.1
-##### 
-###### ovk. email - mail@sovsem.net
-#####    
-###### mvn clear install
-#####  
-```
+# l06
 
-java -jar ./target/l03-1.0.0.jar about
-```
-#####   
-```
-version - Display program version.
-about - Display developer info.
-help - Display list of terminal commands.
-exit - Exit
-```
-```
-https://gitlab.com/OlegVl/l06
-```
+[[_TOC_]]
+
+## Description
+### Mirrors
+* [Github](https://github.com/OlegVlGH/l06)
+### Usage
+    cd <project directory>/target
+    java -jar l06-<version>.jar <argument>
+### Command-line arguments
+    -h, --help      Display a list of terminal commands
+    -v, --version   Display the program version
+    -a, --about     Display developer information
+
+## Installation
+### Dependencies
+* Java 11 or higher
+* Maven 3.x
+### Building
+    cd <project directory>
+    mvn install
+
+## Author
+ovk, [mail@sovsem.net](mailto:mail@sovsem.net)
