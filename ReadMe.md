@@ -1,5 +1,4 @@
-https://github.com/OlegVlGH/l06
-
+#### gitHub
 ####                                                                                                                        "l06" ver 1.0.0
 #####   Software
 ###### Open JDK 11
@@ -10,6 +9,8 @@ https://github.com/OlegVlGH/l06
 #####    
 ###### mvn clear install
 #####  
+```
+https://github.com/OlegVlGH/l06
 ```
 java -jar ./target/l03-1.0.0.jar about
 ```
